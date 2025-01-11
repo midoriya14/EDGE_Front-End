@@ -1,0 +1,51 @@
+HTML stands for HyperText Markup Language and XML eXtensible Markup Language. They are both markup languages used for different purposes.
+
+Purpose:
+HTML is used to structure and display content on the web. It focuses on how data is presented.
+XML is designed to store and transport data. It focuses on the structure and meaning of data.
+
+Tags:
+HTML has predefined tags with specific meanings and uses.
+XML allows custom tags defined by the user, making it more flexible.
+
+Case Sensitivity:
+HTML tags are not case-sensitive.
+XML tags are case-sensitive.
+
+Syntax:
+HTML allows some leniency in its syntax (e.g., unclosed tags).
+XML requires strict adherence to syntax rules (e.g., all tags must be properly closed).
+
+Data Presentation:
+HTML is mainly concerned with visual presentation.
+XML is concerned with data representation and exchange.
+
+Example:
+HTML:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Example</title>
+  </head>
+  <body>
+    <h1>Welcome to HTML</h1>
+    <p>This is an example of HTML.</p>
+    <img src="image.jpg" alt="Example Image">
+  </body>
+</html>
+
+XML:
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book>
+    <title>XML Guide</title>
+    <author>Jane Doe</author>
+    <price>19.99</price>
+  </book>
+  <book>
+    <title>Advanced XML</title>
+    <author>John Smith</author>
+    <price>29.99</price>
+  </book>
+</bookstore>
+
