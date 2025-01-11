@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Student Hostel Management System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f4f9;
+      color: #4a4a4a;
+    }
+
+    header {
+      background-color: #e6e0f8;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      color: #6a0dad;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-section {
+      padding: 30px;
+    }
+
+    .cart-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #fff;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-item img {
+      max-width: 100px;
+      border-radius: 10px;
+    }
+
+    .cart-item h5 {
+      color: #6a0dad;
+    }
+
+    .total-section {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: #6a0dad;
+      border-color: #6a0dad;
+    }
+
+    footer {
+      background-color: #e6e0f8;
+      padding: 10px;
+      text-align: center;
+      color: #6a0dad;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Student Hostel Management System - Cart
+  </header>
+
+  <div class="container cart-section">
+    <h2>Your Cart</h2>
+    <div class="row cart-item">
+      <div class="col-md-2">
+        <img src="https://via.placeholder.com/100" alt="Item Image">
+      </div>
+      <div class="col-md-6">
+        <h5>Room Booking</h5>
+        <p>Deluxe Room with attached bathroom and study area</p>
+      </div>
+      <div class="col-md-2">
+        <p><strong>$300</strong></p>
+      </div>
+      <div class="col-md-2 text-right">
+        <button class="btn btn-danger btn-sm">Remove</button>
+      </div>
+    </div>
+
+    <div class="row cart-item">
+      <div class="col-md-2">
+        <img src="https://via.placeholder.com/100" alt="Item Image">
+      </div>
+      <div class="col-md-6">
+        <h5>Meal Plan</h5>
+        <p>Weekly meal plan with 3 meals a day</p>
+      </div>
+      <div class="col-md-2">
+        <p><strong>$100</strong></p>
+      </div>
+      <div class="col-md-2 text-right">
+        <button class="btn btn-danger btn-sm">Remove</button>
+      </div>
+    </div>
+
+    <div class="row total-section">
+      <div class="col-md-12">
+        <h4>Total: $400</h4>
+        <button class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Student Hostel Management System. All Rights Reserved.
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

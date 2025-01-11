@@ -1,0 +1,3 @@
+A REST API (Representational State Transfer Application Programming Interface) is a way for two systems to communicate over the internet using standard HTTP methods like GET, POST, PUT, DELETE, etc. It is based on the principles of REST architecture, where resources are identified by URLs, and interactions are stateless, meaning each request from a client contains all the information needed to process it.
+
+REST APIs commonly return data in formats like JSON or XML and are designed to be simple, scalable, and compatible with various systems. They are widely used to enable communication between client-side applications (like web or mobile apps) and server-side services.

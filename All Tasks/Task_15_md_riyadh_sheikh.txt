@@ -1,0 +1,27 @@
+An interface in programming defines the structure or contract that a class or object must adhere to. It specifies the properties and methods an object should have but does not implement them. In JavaScript, interfaces are not built-in features but can be mimicked using TypeScript or through conventions in plain JavaScript.
+
+Here is an example using TypeScript to define and implement an interface:
+
+typescript
+interface User {
+  id: number;
+  name: string;
+  login(): void;
+}
+
+class Admin implements User {
+  id: number;
+  name: string;
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  login() {
+    console.log(`${this.name} has logged in.`);
+  }
+}
+
+const admin = new Admin(1, "John Doe");
+admin.login();

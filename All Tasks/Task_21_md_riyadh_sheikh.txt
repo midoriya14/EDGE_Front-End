@@ -1,0 +1,11 @@
+At the of run the command `npm create vite`, it creates a new React project using Vite, a fast build tool optimized for modern frontend development. Here's how the folder structure is set up:
+
+The `node_modules` folder contains all the installed dependencies required for the app. It is automatically managed and should not be edited manually. The `public` folder is used for static assets like images, icons, and resources that are served as they are. For example, the favicon of the app is placed here. 
+
+The `src` folder contains the app’s source code. Key files include `main.jsx`, which is the entry point where the React app is rendered into the DOM, and `App.jsx`, the main component containing the app's structure. You can also create additional subfolders for reusable components or pages here.
+
+The `.gitignore` file specifies the files and folders Git should ignore, like `node_modules` and temporary build files. The `package.json` file describes the project and its dependencies. It also contains scripts like `npm run dev` to start the app.
+
+The `vite.config.js` file is used for Vite-specific settings like plugins or custom configurations. The `index.html` file is the app's main HTML template, which includes a root `div` where the React app is injected.
+
+To start the project, navigate to the folder, run `npm install` to install dependencies, and `npm run dev` to start the development server. Vite makes React development fast and efficient with minimal configuration.

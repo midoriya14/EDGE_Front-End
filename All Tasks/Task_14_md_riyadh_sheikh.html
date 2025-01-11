@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alias & Function Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f4f9;
+      color: #4a4a4a;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #5b0caa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Alias & Function in HTML</h1>
+  <button class="btn" id="greetBtn">Greet User</button>
+  <button class="btn" id="calculateBtn">Calculate Total</button>
+
+  <div id="output" style="margin-top: 20px; padding: 15px; background-color: #e6e0f8; border-radius: 5px;"></div>
+
+  <script>
+    function greetUser(name) {
+      const date = new Date();
+      const today = date.toDateString();
+      return `Welcome to the Student Hostel Management System, ${name}! Today is ${today}.`;
+    }
+
+    function calculateTotal(priceRoom, priceMeals) {
+      const total = priceRoom + priceMeals;
+      return `Room Price: $${priceRoom}<br>Meals Price: $${priceMeals}<br>Total: $${total}`;
+    }
+
+    const greet = greetUser;
+    const calculate = calculateTotal;
+
+    document.getElementById("greetBtn").addEventListener("click", () => {
+      const output = greet("John Doe");
+      document.getElementById("output").innerHTML = output;
+    });
+
+    document.getElementById("calculateBtn").addEventListener("click", () => {
+      const output = calculate(300, 100);
+      document.getElementById("output").innerHTML = output;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+Full Stack Development refers to the development of both the front-end (client-side) and back-end (server-side) portions of a web application. A Full Stack Developer is proficient in working with databases, servers, front-end frameworks, and back-end programming languages.
+
+Components of full stack development include front-end, back-end, database, and devops or hosting. The front-end handles the user interface of the application and uses technologies like HTML, CSS, JavaScript, React, Angular, or Vue.js. The back-end handles the business logic and database interactions using technologies like Node.js, Express.js, Python, PHP, or Ruby on Rails. Databases store and retrieve application data and can include technologies like MySQL, MongoDB, or PostgreSQL. DevOps or hosting involves deployment, server configuration, and application hosting using services like AWS, Azure, or Google Cloud.
+
+Here is an example of a full stack web application for a simple to-do list app:
+
+Front-end code (React):
+
+jsx
+import React, { useState, useEffect } from 'react';
+
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState('');
+
+  const fetchTasks = async () => {
+    const response = await fetch('http://localhost:5000/tasks');
+    const data = await response.json();
+    setTasks(data);
+  };
+
+  const addTask = async () => {
+    if (!newTask) return;
+    await fetch('http://localhost:5000/tasks', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: newTask }),
+    });
+    setNewTask('');
+    fetchTasks();
+  };
+
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+
+  return (
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h1>To-Do List</h1>
+      <input
+        type="text"
+        value={newTask}
+        onChange={(e) => setNewTask(e.target.value)}
+        placeholder="Enter a task"
+      />
+      <button onClick={addTask}>Add Task</button>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>{task.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default App;
+
+
+Back-end code (Node.js with Express):
+
+javascript
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+mongoose.connect('mongodb://localhost:27017/todolist', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const TaskSchema = new mongoose.Schema({
+  name: String,
+});
+
+const Task = mongoose.model('Task', TaskSchema);
+
+app.get('/tasks', async (req, res) => {
+  const tasks = await Task.find();
+  res.json(tasks);
+});
+
+app.post('/tasks', async (req, res) => {
+  const task = new Task(req.body);
+  await task.save();
+  res.status(201).json(task);
+});
+
+app.listen(5000, () => {
+  console.log('Server is running on http://localhost:5000');
+});
+
+
+The front-end allows users to interact with the React app to view and add tasks, which sends HTTP requests to the back-end server. The back-end handles these requests and interacts with the MongoDB database to store and retrieve tasks. This demonstrates how front-end and back-end work together in full stack development.
